@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posting Lomba</title>
+</head>
+<body>
+    <h1>Posting Lomba</h1>
+    <p>Ini adalah halaman untuk posting lomba.</p>
+    <h2>Formulir Posting Lomba</h2>
+    <form action="/submit_lomba" method="POST">
+        <label for="judul">Judul Lomba:</label><br>
+        <input type="text" id="judul" name="judul" required><br><br>
+
+        <label for="deskripsi">Deskripsi Lomba:</label><br>
+        <textarea id="deskripsi" name="deskripsi" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="tanggal">Tanggal Penutupan:</label><br>
+        <input type="date" id="tanggal" name="tanggal" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
