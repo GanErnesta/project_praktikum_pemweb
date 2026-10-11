@@ -2,47 +2,39 @@
 <?php
 session_start();
 
+// Pastikan form dikirim menggunakan POST
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: ../login.php");
+    header("Location: ../../pages/login.php");
     exit;
 }
 
-if (
-    !isset($_SESSION["csrf_token"]) ||
-    !hash_equals($_SESSION["csrf_token"], $_POST["csrf_token"] ?? "")
-) {
-    header("Location: ../login.php?error=request");
-    exit;
-}
-
-require_once __DIR__ . "/../config/database.php";
-
-$email = trim($_POST["email"] ?? "");
+// Ambil input dari form
+$nim = trim($_POST["nim"] ?? "");
 $password = $_POST["password"] ?? "";
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL) || $password === "") {
-    header("Location: ../login.php?error=invalid");
+// Validasi input
+if ($nim === "" || $password === "") {
+    header("Location: ../../pages/login.php?error=empty");
     exit;
 }
 
-$stmt = $pdo->prepare(
-    "SELECT id, nama, email, password FROM users WHERE email = :email LIMIT 1"
-);
-$stmt->execute(["email" => $email]);
-$user = $stmt->fetch();
+// Akun dummy untuk pengujian sementara
+$dummyNim = "255150600111045";
+$dummyPassword = "123456";
 
-if (!$user || !password_verify($password, $user["password"])) {
-    header("Location: ../login.php?error=credentials");
+// Periksa kecocokan akun
+if ($nim === $dummyNim && $password === $dummyPassword) {
+    session_regenerate_id(true);
+
+    $_SESSION["user_id"] = $nim;
+    $_SESSION["user_nama"] = "Muhammad Daffa Wijaya";
+    $_SESSION["user_nim"] = $nim;
+
+    // Arahkan ke halaman Home
+    header("Location: ../../pages/home.php");
     exit;
 }
 
-session_regenerate_id(true);
-
-$_SESSION["user_id"] = $user["id"];
-$_SESSION["user_nama"] = $user["nama"];
-$_SESSION["user_email"] = $user["email"];
-
-unset($_SESSION["csrf_token"]);
-
-header("Location: ../dashboard.php");
+// Jika akun tidak cocok
+header("Location: ../../pages/login.php?error=credentials");
 exit;

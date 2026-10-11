@@ -47,95 +47,260 @@ button {
   cursor: pointer;
 }
 
-.fins-profile-page {
-  min-height: 100vh;
-  background: var(--fins-cream);
+.fins-profile-page>header.fins-navbar,
+.fins-profile-page .fins-navbar {
+  width: 100% !important;
+  height: 72px !important;
+  min-height: 72px !important;
+  max-height: 72px !important;
+  margin: 0 !important;
+  padding: 0 3.2% !important;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 24px !important;
+  position: relative !important;
+  inset: auto !important;
+  z-index: 20 !important;
+  background: #fff5e9 !important;
+  border: 0 !important;
+  border-bottom: 1px solid #f1e4d6 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
+  font-family: Poppins, sans-serif !important;
 }
 
-.fins-navbar {
-  height: 104px;
-  padding: 0 3.8%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 26px;
+.fins-profile-page .fins-navbar * {
+  box-sizing: border-box !important;
 }
 
-.fins-brand {
-  width: 48px;
-  height: 48px;
-  display: grid;
-  place-items: center;
-  border-radius: 11px;
-  background: #ffead6;
-  color: var(--fins-maroon);
-  flex-shrink: 0;
+.fins-profile-page .fins-navbar a {
+  text-decoration: none !important;
 }
 
-.fins-brand-mark {
-  font-size: 29px;
-  font-weight: 700;
-  line-height: 1;
-  position: relative;
+.fins-profile-page .fins-navbar .fins-brand {
+  width: 42px !important;
+  min-width: 42px !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  flex: 0 0 42px !important;
+  display: grid !important;
+  place-items: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: #ffead3 !important;
+  color: #860000 !important;
+  border: 0 !important;
+  border-radius: 7px !important;
 }
 
-.fins-brand-mark span {
-  display: block;
-  font-size: 8px;
-  text-align: right;
-  letter-spacing: 1px;
+.fins-profile-page .fins-navbar .fins-brand-mark {
+  display: block !important;
+  font-size: 23px !important;
+  line-height: .75 !important;
+  font-weight: 800 !important;
+  letter-spacing: -2px !important;
+  color: #860000 !important;
 }
 
-.fins-nav-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(18px, 3vw, 46px);
-  margin-left: auto;
-  margin-right: auto;
+.fins-profile-page .fins-navbar .fins-brand-mark span {
+  display: block !important;
+  text-align: center !important;
+  font-size: 7px !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+  margin-top: 3px !important;
 }
 
-.fins-nav-links a {
-  font-size: 15px;
-  white-space: nowrap;
-  transition: color .2s;
+.fins-profile-page .fins-navbar .fins-nav-links {
+  display: flex !important;
+  flex: 0 1 auto !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: clamp(17px, 3vw, 36px) !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  white-space: nowrap !important;
+  background: transparent !important;
+  border: 0 !important;
 }
 
-.fins-nav-links a:hover {
-  color: var(--fins-maroon);
+.fins-profile-page .fins-navbar .fins-nav-links a {
+  display: inline-block !important;
+  flex: 0 0 auto !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 7px 0 !important;
+  color: #292521 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  font-family: Poppins, sans-serif !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
 }
 
-.fins-nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 22px;
+.fins-profile-page .fins-navbar .fins-nav-links a:hover,
+.fins-profile-page .fins-navbar .fins-nav-links a.active {
+  color: #860000 !important;
 }
 
-.fins-nav-icon {
-  font-size: 24px;
-  color: var(--fins-maroon);
-  position: relative;
-  line-height: 1;
+.fins-profile-page .fins-navbar .fins-nav-links a.active {
+  text-decoration: underline !important;
+  text-underline-offset: 5px !important;
+  text-decoration-thickness: 1px !important;
 }
 
-.notification-icon i {
-  position: absolute;
-  right: -2px;
-  top: -2px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--fins-maroon);
+.fins-profile-page .fins-navbar .fins-nav-actions {
+  display: flex !important;
+  flex: 0 0 auto !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 18px !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
 }
 
-.fins-nav-avatar {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  border: 1px solid var(--fins-maroon);
-  background: var(--fins-maroon);
-  color: white;
-  font-weight: 600;
+.fins-profile-page .fins-navbar .fins-nav-icon {
+  display: grid !important;
+  flex: 0 0 20px !important;
+  place-items: center !important;
+  position: relative !important;
+  width: 20px !important;
+  min-width: 20px !important;
+  height: 23px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  color: #860000 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.fins-profile-page .fins-navbar .fins-nav-icon svg {
+  display: block !important;
+  width: 19px !important;
+  height: 19px !important;
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 1.7 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+}
+
+.fins-profile-page .fins-navbar .notification-icon i {
+  display: block !important;
+  position: absolute !important;
+  width: 5px !important;
+  height: 5px !important;
+  top: 1px !important;
+  right: 0 !important;
+  border-radius: 50% !important;
+  background: #860000 !important;
+}
+
+.fins-profile-page .fins-navbar .fins-nav-avatar {
+  display: grid !important;
+  flex: 0 0 38px !important;
+  place-items: center !important;
+  position: relative !important;
+  width: 38px !important;
+  min-width: 38px !important;
+  height: 38px !important;
+  min-height: 38px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 2px solid #860000 !important;
+  border-radius: 50% !important;
+  background: #ffe9d6 !important;
+}
+
+.fins-profile-page .fins-navbar .fins-nav-avatar img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+}
+
+@media (max-width: 900px) {
+
+  .fins-profile-page>header.fins-navbar,
+  .fins-profile-page .fins-navbar {
+    padding: 0 3% !important;
+    gap: 15px !important;
+  }
+
+  .fins-profile-page .fins-navbar .fins-nav-links {
+    gap: 17px !important;
+  }
+
+  .fins-profile-page .fins-navbar .fins-nav-links a {
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 620px) {
+
+  .fins-profile-page>header.fins-navbar,
+  .fins-profile-page .fins-navbar {
+    height: auto !important;
+    min-height: 62px !important;
+    max-height: none !important;
+    flex-wrap: wrap !important;
+    padding: 10px 4% !important;
+    gap: 10px !important;
+  }
+
+  .fins-profile-page .fins-navbar .fins-brand {
+    width: 38px !important;
+    min-width: 38px !important;
+    height: 34px !important;
+    flex-basis: 38px !important;
+  }
+
+  .fins-profile-page .fins-navbar .fins-nav-actions {
+    gap: 12px !important;
+  }
+
+  .fins-profile-page .fins-navbar .fins-nav-avatar {
+    width: 33px !important;
+    min-width: 33px !important;
+    height: 33px !important;
+    min-height: 33px !important;
+    flex-basis: 33px !important;
+  }
+
+  .fins-profile-page .fins-navbar .fins-nav-links {
+    order: 3 !important;
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    justify-content: flex-start !important;
+    gap: 22px !important;
+    padding: 0 2px 4px !important;
+  }
 }
 
 .fins-profile-main {
