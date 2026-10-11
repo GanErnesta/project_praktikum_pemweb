@@ -1,0 +1,365 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #29211e;
+    background: #fff8f0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.login-container {
+    display: grid;
+    grid-template-columns: 48% 52%;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 55px clamp(30px, 4.5vw, 70px);
+    background: #fff8f0;
+}
+
+.login-form h1 {
+    color: #970000;
+    font-size: clamp(25px, 2.15vw, 29px);
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    max-width: 360px;
+    color: #39312c;
+    font-size: 14px;
+    line-height: 1.45;
+    margin-bottom: 28px;
+}
+
+.login-form label {
+    display: block;
+    margin: 14px 0 6px;
+    font-size: 13px;
+    color: #39312c;
+}
+
+.login-form input {
+    display: block;
+    width: 100%;
+    height: 42px;
+    padding: 0 18px;
+    border: 1px solid #b83c36;
+    border-radius: 9px;
+    outline: none;
+    background: #fff2e5;
+    color: #29211e;
+    font-family: inherit;
+    font-size: 12px;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.login-form input::placeholder {
+    color: #92867d;
+}
+
+.login-form input:focus {
+    border-color: #970000;
+    box-shadow: 0 0 0 3px #97000012;
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.password-wrapper input {
+    padding-right: 48px;
+}
+
+.password-wrapper button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 43px;
+    height: 42px;
+    border: none;
+    background: transparent;
+    color: #970000;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.forgot {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.forgot a {
+    color: #970000;
+    font-size: 11px;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
+
+.login-button {
+    display: block;
+    width: 100%;
+    height: 41px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #970000;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.login-button:hover {
+    background: #780000;
+}
+
+.signup {
+    margin-top: 10px;
+    text-align: center;
+    color: #958982;
+    font-size: 11px;
+}
+
+.signup a {
+    color: #970000;
+    font-weight: 500;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    border-radius: 7px;
+    background: #fbe7e4;
+    color: #970000;
+    font-size: 12px;
+}
+
+.login-banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 43px 28px 22px;
+    background: linear-gradient(
+        145deg,
+        #a00000 0%,
+        #950000 50%,
+        #7f0000 100%
+    );
+    color: #ffffff;
+}
+
+.login-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.login-banner::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: -95px;
+    width: 220px;
+    height: 220px;
+    background: rgba(255, 180, 180, 0.12);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.logo {
+    position: absolute;
+    top: 55px;
+    left: 65px;
+    width: 58px;
+    height: 58px;
+    background: #fff0df;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.logo img {
+    width: 38px;
+    height: auto;
+    display: block;
+}
+
+.banner-text {
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+    margin-bottom: 0;
+    padding-top: 35px;
+}
+
+.banner-text p:first-child {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.banner-text h2 {
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 28px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.banner-text p:last-child {
+    max-width: 440px;
+    color: #fff4ec;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.login-banner::before,
+.login-banner::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    background: #ffffff12;
+    pointer-events: none;
+}
+
+.login-banner::before {
+    width: 200px;
+    height: 200px;
+    top: -90px;
+    left: -100px;
+}
+
+.login-banner::after {
+    width: 220px;
+    height: 150px;
+    right: -85px;
+    bottom: -65px;
+    transform: rotate(-20deg);
+}
+
+.illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 280px;
+    margin: 5px 0 12px;
+}
+
+.illustration img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.login-banner footer {
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+    color: #ffffff;
+    font-size: 10px;
+}
+
+@media (max-width: 850px) {
+    .login-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .login-form {
+        padding: 35px 25px;
+    }
+
+    .login-banner {
+        padding: 35px 22px 20px;
+    }
+
+    .login-form h1 {
+        font-size: 40px;
+    }
+
+    .banner-text h2 {
+        font-size: 30px;
+    }
+
+    .illustration {
+        height: 220px;
+    }
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+input[type="password"]::-webkit-contacts-auto-fill-button,
+input[type="password"]::-webkit-credentials-auto-fill-button {
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+}
+
+@media (max-width: 600px) {
+    .login-container {
+        grid-template-columns: 1fr;
+    }
+
+    .login-form {
+        min-height: 100vh;
+        padding: 35px 25px;
+    }
+
+    .login-banner {
+        display: none;
+    }
+
+    .login-form h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+}
